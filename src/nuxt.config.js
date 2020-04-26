@@ -74,10 +74,14 @@ module.exports = {
   /*
   ** Build configuration
   */
- buildDir: '.nuxt',
+  buildDir: '.nuxt',
   build: {
     publicPath: '/assets/',
-
+    //https://github.com/nuxt/nuxt.js/issues/3828#issuecomment-508428611
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js',
+      chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js'
+    },
     babel: {
       presets({ isServer }) {
       //   let targets = isServer ? { node: '10' } : { ie: '11' }
