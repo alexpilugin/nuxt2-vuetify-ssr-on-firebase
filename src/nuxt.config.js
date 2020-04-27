@@ -29,7 +29,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    // 'ant-design-vue/dist/antd.css'
+    '~assets/styles/main.css'
   ],
 
   /*
@@ -53,15 +53,28 @@ module.exports = {
   vuetify: {
     materialIcons: false,
     theme: {
-      dark: false,
-      default: 'white',
-      primary: '#03A9F4',
-      secondary: '#009688',
-      accent: '#E91E63',
-      error: '#f44336',
-      warning: '#FDD835',
-      info: '#2196f3',
-      success: '#4caf50'
+      dark: true,
+      default: 'dark',
+      themes: {
+        light: {
+          primary: '#1976D2',
+          secondary: '#424242',
+          accent: '#82B1FF',
+          error: '#FF5252',
+          info: '#2196F3',
+          success: '#4CAF50',
+          warning: '#FB8C00',
+        },
+        dark: {
+          primary: '#2196F3',
+          secondary: '#424242',
+          accent: '#FF4081',
+          error: '#FF5252',
+          info: '#2196F3',
+          success: '#4CAF50',
+          warning: '#FB8C00',
+        },
+      },
     }
   },
   /*
@@ -70,7 +83,13 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  transition: {
+    name: "page", //css class: '~assets/styles/main.css'
+    mode: "out-in"
+  },
+  router: {
+    linkActiveClass: "active-route-link"
+  },
   /*
   ** Build configuration
   */
