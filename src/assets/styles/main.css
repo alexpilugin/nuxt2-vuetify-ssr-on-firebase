@@ -7,3 +7,7 @@
   opacity: 0;
   transform: translate(10px, 0);
 }
+
+.nuxt-active-link {
+  color: #41b883;
+}

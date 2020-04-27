@@ -83,12 +83,12 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-  transition: {
+  pageTransition: {
     name: "page", //css class: '~assets/styles/main.css'
     mode: "out-in"
   },
   router: {
-    linkActiveClass: "active-route-link"
+    linkActiveClass: 'nuxt-active-link'
   },
   /*
   ** Build configuration
